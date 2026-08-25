@@ -1,0 +1,36 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* 폰에서 읽는 문서다. 기본 테마는 코드 서식(`code`)을 줄바꿈하지 않아
+   긴 파일 경로가 화면 밖으로 잘렸다 — 실기기 확인(SM-S921N)에서 나온 것이라
+   여기서 고친다. 근거 표기를 지우는 대신 접히게 한다. */
+code, tt {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+pre, pre > code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* 표가 여럿이라 좁은 화면에서 본문을 옆으로 밀어낸다. 표만 따로 스크롤시킨다. */
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.4rem 0.6rem;
+  vertical-align: top;
+}
+
+/* 본문이 가로로 새지 않게 한다. */
+#main_content, section {
+  overflow-wrap: break-word;
+}
